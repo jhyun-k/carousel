@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>오늘뭐먹지?</title>
-    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="/CSS/reset.css">
     <style>
         @charset 'utf-8';
 
@@ -184,7 +184,16 @@
             background-color: orange;
         }
         input:checked + label{
-            background-color: rgb(143, 89, 24);
+            background-color: rgb(174, 109, 30);
+        }
+        h3{
+            font-size: 40px;
+            font-weight: bold;
+            text-align: center;
+            position: fixed;
+            bottom: 50px;
+            left: 45%;
+            color: hotpink;
         }
     </style>
 </head>
@@ -204,7 +213,6 @@
             <div class='second'>
                 <input type="radio" name='second' id='warm'><label for='warm' class='radio warm'>뜨거운거</label>
                 <input type="radio" name='second' id='cool'><label for='cool' class='radio cool'>차가운거</label>
-                
             </div>
         </form>
         <button type='submit' class='btn'>오늘 뭐 먹지?</button>
@@ -226,6 +234,7 @@
                     alt=""></li>
         </ul>
     </article>
+    <h3></h3>
     <script>
         const korea = document.getElementById('korea')
         const west = document.getElementById('west')
@@ -264,21 +273,28 @@
             }
             if (score == 6) {
                 center.classList.add('kc')
+                menu.innerHTML = '냉면'
             } else if (score == 11) {
                 center.classList.add('kw')
+                menu.innerHTML = '김치찌개'
+
             } else if (score == 7) {
                 center.classList.add('wc')
-
+                menu.innerHTML = '샐러드'
             } else if (score == 12) {
+                menu.innerHTML = '파스타'
                 center.classList.add('ww')
-
             } else if (score == 8) {
+                menu.innerHTML = '짜장'
                 center.classList.add('cc')
             } else if (score == 13) {
+                menu.innerHTML = '중국냉면'
                 center.classList.add('cw')
             } else if (score == 9) {
+                menu.innerHTML = '초밥'
                 center.classList.add('jc')
             } else if (score == 14) {
+                menu.innerHTML = '덮밥'
                 center.classList.add('jw')
             }
             console.log(score)
